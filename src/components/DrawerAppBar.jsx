@@ -17,7 +17,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'About','Skills', 'Contact'];
+// const navItems = ['Home', 'About','Skills', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -34,13 +34,32 @@ function DrawerAppBar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-          <ListItemButton sx={{ textAlign: 'center' }} >
-              <ListItemText primary={item} />
+       
+          <ListItem  disablePadding>
+         
+            <ListItemButton sx={{textAlign:"center"}} href='/'>
+              <ListItemText primary="Home"/>
             </ListItemButton>
           </ListItem>
-         ))}
+          <ListItem  disablePadding>
+         
+         <ListItemButton sx={{textAlign:"center"}} href='/About'>
+           <ListItemText primary="About"/>
+         </ListItemButton>
+       </ListItem>
+       <ListItem  disablePadding>
+         
+         <ListItemButton sx={{textAlign:"center"}} href='/Skills'>
+           <ListItemText primary="skills"/>
+         </ListItemButton>
+       </ListItem>
+       <ListItem  disablePadding>
+         
+         <ListItemButton sx={{textAlign:"center"}} href='/Contact'>
+           <ListItemText primary="Contact"/>
+         </ListItemButton>
+       </ListItem>
+       
       </List>
     </Box>
   );
